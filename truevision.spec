@@ -8,6 +8,7 @@ Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/truevision/%{name}-%{version}.tar.bz2
 # Source0-md5:	0cc2a48150db97ea12206b3ed70f4e90
 Patch0:		%{name}-DESTDIR.patch
+Patch1:		%{name}-ac-am.patch
 URL:		http://truevision.sourceforge.net/
 BuildRequires:	OpenGL-devel
 BuildRequires:	XFree86-devel
@@ -17,9 +18,9 @@ BuildRequires:	gettext-devel
 BuildRequires:	glib-devel
 BuildRequires:	gnome-libs-devel
 BuildRequires:	gtk+-devel
-BuildRequires:	gtkglarea-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	zlib-devel
+BuildRequires:  gtkglext-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sysconfdir	/etc/X11/GNOME
@@ -32,14 +33,21 @@ Modeler 3D dla GNOME.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch1 -p1
 
 %build
+# get rid of symlinks to nowhere
+rm -f INSTALL COPYING missing install-sh
 %{__gettextize}
-%{__aclocal} -I macros
+%{__aclocal} -I m4
 %{__autoconf}
 %{__automake}
+#%{__libtoolize}
+touch INSTALL
+touch COPYING
+
 %configure
+make clean
 %{__make}
 
 %install
