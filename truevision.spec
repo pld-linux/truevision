@@ -1,12 +1,12 @@
 Summary:	The GNOME 3D modeller
 Summary(pl):	Modeler 3D dla GNOME
 Name:		truevision
-Version:	0.3.10
+Version:	0.4.0
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://dl.sourceforge.net/truevision/%{name}-%{version}.tar.gz
-# Source0-md5:	260acc07ffb0943554816eb47d4be88b
+Source0:	http://dl.sourceforge.net/truevision/%{name}-%{version}.tar.bz2
+# Source0-md5:	0cc2a48150db97ea12206b3ed70f4e90
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://truevision.sourceforge.net/
 BuildRequires:	OpenGL-devel
