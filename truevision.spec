@@ -1,4 +1,5 @@
 Summary:	The GNOME 3D modeller
+Summary(pl):	Modeler 3D dla GNOME
 Name:		truevision
 Version:	0.3.10
 Release:	1
@@ -6,12 +7,12 @@ License:	GPL
 Group:		X11/Applications
 Source0:	http://prdownloads.sourceforge.net/truevision/%{name}-%{version}.tar.gz
 URL:		http://truevision.sourceforge.net/
+BuildRequires:	OpenGL-devel
+BuildRequires:	XFree86-devel
 BuildRequires:	glib-devel
+BuildRequires:	gnome-libs-devel
 BuildRequires:	gtk-devel
 BuildRequires:	gtkglarea-devel
-BuildRequires:	XFree86-devel
-BuildRequires:	OpenGL-devel
-BuildRequires:	gnome-libs-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -20,6 +21,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The GNOME 3D modeller.
+
+%description -l pl
+Modeler 3D dla GNOME.
 
 %prep
 %setup -q
