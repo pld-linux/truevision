@@ -1,0 +1,29 @@
+diff -urN truevision-0.3.10.org/Makefile.am truevision-0.3.10/Makefile.am
+--- truevision-0.3.10.org/Makefile.am	Fri Oct 25 12:00:54 2002
++++ truevision-0.3.10/Makefile.am	Fri Oct 25 12:02:32 2002
+@@ -4,17 +4,17 @@
+ 
+ install-data-local:
+ 	test -d pixmaps \
+-	&& install -d -m 0755 @PACKAGE_PIXMAPS_DIR@ \
+-	&& install -m 0644 pixmaps/* @PACKAGE_PIXMAPS_DIR@
++	&& install -d -m 0755 $(DESTDIR)@PACKAGE_PIXMAPS_DIR@ \
++	&& install -m 0644 pixmaps/* $(DESTDIR)@PACKAGE_PIXMAPS_DIR@
+ 	test -d materials \
+-	&& install -d -m 0755 @PACKAGE_MATERIALS_DIR@ \
+-	&& cp -Rp materials/* @PACKAGE_MATERIALS_DIR@
++	&& install -d -m 0755 $(DESTDIR)@PACKAGE_MATERIALS_DIR@ \
++	&& cp -Rp materials/* $(DESTDIR)@PACKAGE_MATERIALS_DIR@
+ 
+ dist-hook:
+ 	test -d pixmaps \
+-	&& mkdir $(distdir)/pixmaps \
+-	&& cp -p pixmaps/* $(distdir)/pixmaps
++	&& mkdir $(DESTDIR)$(distdir)/pixmaps \
++	&& cp -p pixmaps/* $(DESTDIR)$(distdir)/pixmaps
+ 	test -d materials \
+-	&& mkdir $(distdir)/materials \
+-	&& cp -Rp materials/* $(distdir)/materials
++	&& mkdir $(DESTDIR)$(distdir)/materials \
++	&& cp -Rp materials/* $(DESTDIR)$(distdir)/materials
+ 
