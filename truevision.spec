@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/truevision/%{name}-%{version}.tar.gz
+# Source0-md5:	260acc07ffb0943554816eb47d4be88b
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://truevision.sourceforge.net/
 BuildRequires:	OpenGL-devel
