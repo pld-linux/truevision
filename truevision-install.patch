@@ -1,0 +1,30 @@
+--- truevision-0.5.0/materials/Metals/Makefile.am.wiget	2004-12-29 18:25:29.000000000 +0100
++++ truevision-0.5.0/materials/Metals/Makefile.am	2004-12-30 17:03:01.712138445 +0100
+@@ -3,11 +3,3 @@
+ SUBDIRS = Brass Copper Golds
+ 
+ truevision_materials_metalsdir = $(prefix)/@NO_PREFIX_PACKAGE_DATA_DIR@/truevision/materials/Metals
+-
+-truevision_materials_metals_DATA = \
+-	Brass\
+-	Copper\
+-	Golds
+-	
+-
+-EXTRA_DIST = $(truevision_materials_metals_DATA)
+--- truevision-0.5.0/materials/Makefile.am.wiget	2004-12-30 17:19:09.028614127 +0100
++++ truevision-0.5.0/materials/Makefile.am	2004-12-30 17:19:22.234419245 +0100
+@@ -3,13 +3,3 @@
+ SUBDIRS = Effects Glass Metals Skies Stones Woods
+ 
+ truevision_materialsdir = $(prefix)/@NO_PREFIX_PACKAGE_DATA_DIR@/truevision/materials
+-
+-truevision_materials_DATA = \
+-	Effects\
+-	Glass\
+-	Metals\
+-	Skies\
+-	Stones\
+-	Woods
+-
+-EXTRA_DIST = $(truevision_materials_DATA)
