@@ -5,7 +5,7 @@ Version:	0.3.10
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://prdownloads.sourceforge.net/truevision/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/truevision/%{name}-%{version}.tar.gz
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://truevision.sourceforge.net/
 BuildRequires:	OpenGL-devel
@@ -55,5 +55,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc NEWS ChangeLog NEWS README TODO
 %attr(755,root,root) %{_bindir}/*
-%{_datadir}/pixmaps/%{name}
+%{_pixmapsdir}/%{name}
 %{_datadir}/%{name}
