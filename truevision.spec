@@ -20,7 +20,7 @@ BuildRequires:	gnome-libs-devel
 BuildRequires:	gtk+-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	zlib-devel
-BuildRequires:  gtkglext-devel
+BuildRequires:	gtkglext-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sysconfdir	/etc/X11/GNOME
