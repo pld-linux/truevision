@@ -1,5 +1,5 @@
 Summary:	The GNOME 3D modeller
-Summary(pl):	Modeler 3D dla GNOME
+Summary(pl.UTF-8):   Modeler 3D dla GNOME
 Name:		truevision
 Version:	0.5.0
 Release:	0.1
@@ -31,7 +31,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 The GNOME 3D modeller.
 
-%description -l pl
+%description -l pl.UTF-8
 Modeler 3D dla GNOME.
 
 %prep
