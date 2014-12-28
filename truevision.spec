@@ -16,7 +16,7 @@ BuildRequires:	OpenGL-devel
 BuildRequires:	XFree86-devel
 BuildRequires:	automake
 BuildRequires:	autoconf
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	glib2-devel
 BuildRequires:	libgnomeui-devel
 BuildRequires:	gtk+2-devel
