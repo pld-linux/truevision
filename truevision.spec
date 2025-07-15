@@ -36,9 +36,9 @@ Modeler 3D dla GNOME.
 
 %prep
 %setup -q
-%patch1 -p1
-%patch2 -p1
-%patch3 -p1 -b .wiget
+%patch -P1 -p1
+%patch -P2 -p1
+%patch -P3 -p1 -b .wiget
 
 %build
 # get rid of symlinks to nowhere
